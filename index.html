@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+</head>
+<body>
+    <!-- Generar burbujas de forma dinámica en JavaScript -->
+    <script>
+        for (let i = 0; i < 100; i++) { // Crear 100 burbujas
+            const bubble = document.createElement('div');
+            bubble.className = 'bubble';
+            bubble.style.left = `${Math.random() * 100}vw`; // Posición horizontal aleatoria
+            bubble.style.top = `${Math.random() * 100}vh`; // Posición vertical aleatoria
+            bubble.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duración de la animación aleatoria
+            document.body.appendChild(bubble);
+        }
+    </script>
+
+    <div class="registration-form">
+        <h2>Registro Formulario</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <button type="submit">Registrarse</button>
+        </form>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    animation: bubble-float 5s linear infinite, bubble-color 5s linear infinite;
+}
+
+@keyframes bubble-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bubble-color {
+    0%, 100% {
+        background-color: transparent;
+        border-color: transparent;
+    }
+    25% {
+        background-color: #ff5733;
+        border-color: #ff5733;
+    }
+    50% {
+        background-color: #33ff57;
+        border-color: #33ff57;
+    }
+    75% {
+        background-color: #5733ff;
+        border-color: #5733ff;
+    }
+}
+
+.registration-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.registration-form h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.registration-form label, .registration-form input {
+    display: block;
+    margin: 10px 0;
+}
+
+.registration-form input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.registration-form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
